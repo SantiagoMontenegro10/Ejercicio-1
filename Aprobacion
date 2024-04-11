@@ -1,0 +1,20 @@
+function verificarAprobacion(calificacion, asistencias) {
+  
+    let porcentajeAsistencias = (asistencias / 100) * 100; 
+
+   
+    if (calificacion >= 70 && porcentajeAsistencias >= 80) {
+        return "Aprobado";
+    } else {
+        return "Reprobado";
+    }
+}
+
+
+let calificacion = parseFloat(prompt("Ingrese la calificación del alumno:"));
+let asistencias = parseFloat(prompt("Ingrese el porcentaje de asistencias del alumno:"));
+
+
+let resultado = verificarAprobacion(calificacion, asistencias);
+alert("El alumno está: " + resultado);
+
